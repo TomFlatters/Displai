@@ -1,33 +1,153 @@
+button{
+  border: none;
+  background: white;
+  cursor: pointer;
+}
 .App {
   text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
   min-height: 100vh;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.Header {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: flex-end;
+  position: fixed;
+  width: 92vw;
+  height: 10vh;
+  color: black;
+  background-color: #546A7B;
+  padding: 0 4vw;
+}
+
+.HeaderItem {
+  padding: 0 2vw;
+  cursor: pointer;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.HeaderItemLeft {
+  margin-right: auto;
+  cursor: pointer;
+  color: white
+}
+.HeaderItem:hover{
+  color: #97a7bd;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.Panel {
+  color: black;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #393D3F;
+}
+.PanelCol{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.Title {
+  width: 70vw;
+  font-size: 2.8em;
+  font-family: 'Merriweather', serif;
+  font-weight: 500;
+  text-align: left;
+  padding: 1vh 0 1vh 0;
+  color: white;
+}
+.PanelPic{
+  width:45vw;
+}
+
+.GetStarted{
+  font-family: 'Open Sans', sans-serif;
+  width: 18vw;
+  padding: 2vh;
+  border-radius: 5px;
+  background: #546A7B;
+  color: white;
+  font-size: 1em;
+  font-weight: 600;
+  margin-top: 4vh;
   }
-  to {
-    transform: rotate(360deg);
-  }
+.GetStarted:hover{
+  background: #62929E;
+}
+
+.LoginButton{
+  font-family: 'Open Sans', sans-serif;
+  width: 25vw;
+  padding: 2vh 0;
+  border-radius: 5px;
+  background: #546A7B;
+  color: white;
+  font-size: 1em;
+  font-weight: 600;
+}
+.LoginButton:hover{
+  background: #62929E;
+}
+
+.padLeft {
+  margin-left: 10vw;
+}
+
+.HeaderLogo {
+  width: 10vh;
+  height: 10vh;
+}
+
+.Form{
+  margin-top: 10vh;
+  width: 50vw;
+  height: 60vh;
+  background-color: white;
+  color: black;
+  border-radius: 10px;
+}
+
+.FormContainer{
+  height: 35vh;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+  display: flex;
+  flex-direction: column;
+  align-items:  center;
+  justify-content: space-evenly;
+}
+
+.Input {
+  font-family: 'Merriweather', serif;
+  padding: 0.5vh 0.5vw;
+  font-size: 1em;  
+  border: none;
+  border-bottom: 3px solid #546A7B;
+  margin: 0 0 1.5vh 0;
+  width: 24vw;
+}
+.Input:focus{
+  border-bottom: 3px solid #62929E;
+  outline: none;
+}
+
+.LoginSubtext{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1em;
+  font-weight: 600;
+  padding: 0;
+  margin: 1vh 0 0 0;
+}
+
+.FlexLeft{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: left;
+}
+
+.LineWidth{
+  width: 40vw;
 }
