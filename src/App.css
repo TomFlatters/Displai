@@ -1,12 +1,12 @@
-button{
+/* button{
   border: none;
   background: white;
   cursor: pointer;
-}
+} */
 .App {
   text-align: center;
   min-height: 100vh;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 .Header {
@@ -17,19 +17,18 @@ button{
   width: 92vw;
   height: 10vh;
   color: black;
-  background-color: #546A7B;
+  background-color: #ffffff;
+  border-bottom: 2px solid #c7c7c7;
   padding: 0 4vw;
 }
 
 .HeaderItem {
   padding: 0 2vw;
   cursor: pointer;
-  color: white;
 }
 .HeaderItemLeft {
   margin-right: auto;
   cursor: pointer;
-  color: white
 }
 .HeaderItem:hover{
   color: #97a7bd;
@@ -41,7 +40,7 @@ button{
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #393D3F;
+  background-color: #fafafa;
 }
 .PanelCol{
   display: flex;
@@ -50,49 +49,43 @@ button{
   justify-content: flex-start;
 }
 .Title {
-  width: 70vw;
+  width: 65vw;
   font-size: 2.8em;
-  font-family: 'Merriweather', serif;
-  font-weight: 500;
+  font-family: 'Roboto', serif;
+  font-weight: 400;
   text-align: left;
-  padding: 1vh 0 1vh 0;
-  color: white;
-}
-.PanelPic{
-  width:45vw;
+  margin-bottom: 5vh;
+  margin-right:15vw;
 }
 
 .GetStarted{
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
   width: 18vw;
   padding: 2vh;
   border-radius: 5px;
-  background: #546A7B;
+  background: #62929E;
   color: white;
   font-size: 1em;
   font-weight: 600;
   margin-top: 4vh;
   }
 .GetStarted:hover{
-  background: #62929E;
+  background: #546A7B;
 }
 
 .LoginButton{
-  font-family: 'Open Sans', sans-serif;
-  width: 25vw;
+  font-family: 'Roboto', sans-serif;
+  width: 12vw;
+  margin: 0 0.5vw;
   padding: 2vh 0;
   border-radius: 5px;
-  background: #546A7B;
+  background: #62929E;
   color: white;
   font-size: 1em;
   font-weight: 600;
 }
 .LoginButton:hover{
-  background: #62929E;
-}
-
-.padLeft {
-  margin-left: 10vw;
+  background: #546A7B;
 }
 
 .HeaderLogo {
@@ -100,10 +93,18 @@ button{
   height: 10vh;
 }
 
-.Form{
-  margin-top: 10vh;
+.UpperForm{
+  margin-top: 5vh;
   width: 50vw;
-  height: 60vh;
+  height: 40vh;
+  background-color: white;
+  color: black;
+  border-radius: 10px;
+}
+.LowerForm{
+  margin-top: 1vh;
+  width: 50vw;
+  height: 15vh;
   background-color: white;
   color: black;
   border-radius: 10px;
@@ -118,23 +119,31 @@ button{
   align-items:  center;
   justify-content: space-evenly;
 }
-
+.LowerFormContainer{
+  height: 11vh;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+  display: flex;
+  flex-direction: row;
+  align-items:  center;
+  justify-content: space-evenly;
+}
 .Input {
-  font-family: 'Merriweather', serif;
+  font-family: 'Roboto', sans-serif;
   padding: 0.5vh 0.5vw;
   font-size: 1em;  
   border: none;
-  border-bottom: 3px solid #546A7B;
+  border-bottom: 3px solid #62929E;
   margin: 0 0 1.5vh 0;
   width: 24vw;
 }
 .Input:focus{
-  border-bottom: 3px solid #62929E;
+  border-bottom: 3px solid #546A7B;
   outline: none;
 }
 
 .LoginSubtext{
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 1em;
   font-weight: 600;
   padding: 0;
@@ -147,7 +156,12 @@ button{
   align-items: flex-start;
   justify-content: left;
 }
-
-.LineWidth{
-  width: 40vw;
+.LoginScreen {
+  color: black;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #393D3F;
 }
