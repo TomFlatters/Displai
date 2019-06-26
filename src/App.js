@@ -17,10 +17,10 @@ function App() {
       <ThemeProvider theme={theme}>
     <div className="App">
       <Header />
-
+        <ThemeProvider theme={theme}>
         <Route exact path="/" component={Home} />
         <Route exact path="/login" component={Login} />
-
+        </ThemeProvider>
     </div>
     </ThemeProvider>
     </Router>

@@ -5,7 +5,38 @@ import '../App.css';
 import fire from '../config/firebaseconfig.js';
 import firebase from 'firebase'
 
-class Login extends Component {
+import TextField from '@material-ui/core/TextField'
+import { makeStyles } from '@material-ui/styles';
+import { blue } from '@material-ui/core/colors';
+
+import StyledTextField from './StyledTextField.js'
+
+const styles = theme => ({
+    textField: {
+        width: '90%',
+        marginLeft: 'auto',
+        marginRight: 'auto',            
+        backgroundColor: "white"    },
+    input: {
+        backgroundColor: 'white'
+    }
+});
+  function Hook() {
+    const classes = styles();
+    return (<TextField
+        id="email"
+        label="Email"
+        className={classes.textField}
+        margin="normal"
+        variant="outlined"
+        inputStyle={{
+            color: "blue",
+        }}
+        />
+    );
+  }
+
+class Login extends Component{
 
     constructor(props){
         super()
@@ -92,9 +123,11 @@ class Login extends Component {
     render() { 
     return (
         <div className="LoginScreen">
+        <StyledTextField/>
             <div className="UpperForm">
             <div className="FormContainer">
             <div className="FlexLeft">
+            
                 <span className="LoginSubtext">EMAIL</span>
                 <input value={this.state.email} onChange={this.email} className="Input"></input>
                 <div className="LoginSubtext">PASSWORD</div>
