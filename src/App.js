@@ -15,7 +15,7 @@ function App() {
   return (
     <Router>
       <ThemeProvider theme={theme}>
-    <div className="App">
+    <div className="App" style={{backgroundColor: `${theme.palette.secondary.dark}`}}>
       <Header />
         <ThemeProvider theme={theme}>
         <Route exact path="/" component={Home} />

@@ -5,12 +5,15 @@ import Typography from '@material-ui/core/Typography';
 import '../App.css';
 import { Link, Route, BrowserRouter as Router} from 'react-router-dom';
 
+import $ from 'jquery'
+
+import theme from '../theme.js'
 
 class Header extends Component{
     render(){
     return(
-        <div style={{position: "fixed", width: "100vw"}}>
-    <Toolbar style={{borderBottom: "1px solid #c7c7c7", backgroundColor: "#fafafa"}}>
+        <div style={{position: "fixed", width: "100vw",}}>
+    <Toolbar style={{borderBottom: "1px solid #c7c7c7", backgroundColor: "white"}}>
           <Link
               style={{ textDecoration: 'none',color: "black"}}
                to="/">
@@ -21,9 +24,9 @@ class Header extends Component{
             Displai
           </Typography>
           {/* <Button variant="contained" size="large" color="secondary">Feed</Button> */}
-          <Link style={{textDecoration: 'none'}} to="/login">
-          <Button variant="outlined" size="large" color="secondary">Login</Button>
-          </Link>
+          <Button variant="contained" size="large" color="secondary" onClick={() => { $('html,body').animate({
+        scrollTop:"1000%"},
+        'slow');}}>Login</Button>
           </Toolbar>
           </div>
     )

@@ -7,16 +7,13 @@ import TextField from '@material-ui/core/TextField';
 const styles = theme => ({
   container: {
     display: 'flex',
-    flexWrap: 'wrap',
   },
   textField: {
-    marginLeft: theme.spacing.unit,
-    marginRight: theme.spacing.unit,
-    width: 200,
+    width: "25vw",
   },
 
   cssLabel: {
-    color : `${theme.palette.secondary.light} !important`,
+    color : `black !important`,
   },
 
   cssOutlinedInput: {
@@ -39,7 +36,7 @@ const styles = theme => ({
 
 class StyledTextField extends React.Component {
   state = {
-    name: 'InputMode',
+    name: '',
   };
 
   handleChange = name => event => {
@@ -55,12 +52,13 @@ class StyledTextField extends React.Component {
       <form className={classes.container} noValidate autoComplete="off">
         <TextField
           id="standard-name"
-          label="Name"
+          label={this.props.inputname}
           className={classes.textField}
-          value={this.state.name}
-          onChange={this.handleChange('name')}
+          value={this.props.inputvalue}
+          onChange={this.props.oninputchange}
           margin="normal"
           variant="outlined"
+          placeholder=""
           InputLabelProps={{
             classes: {
               root: classes.cssLabel,
