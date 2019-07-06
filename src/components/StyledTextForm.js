@@ -54,14 +54,15 @@ signup(e){
     fire.auth().createUserWithEmailAndPassword(this.state.email, this.state.password)
     .then(
         (user)=>{
-            fire.auth().currentUser.updateProfile({ displayName: "Tom" })
+            fire.auth().currentUser.updateProfile({ displayName: "" })
       })
     .then((user)=>{
             fire.firestore().collection('users').doc(fire.auth().currentUser.uid)
             .set({ 
-                displayName: "Tom",
+                displayName: "",
                 photoURL: fire.auth().currentUser.photoURL
             });
+            console.log("sign up successful")
         })
     .catch(function(error) {
         // Handle Errors here.
@@ -82,6 +83,7 @@ login(e){
         // var errorMessage = error.message;
         // ...
 })
+console.log("login successful")
 }
 
 googleSignIn(e){
@@ -106,7 +108,7 @@ googleSignIn(e){
         // The firebase.auth.AuthCredential type that was used.
         var credential = error.credential;
         // ...
-      });
+      })
 }
   render() {
     const { classes } = this.props;
@@ -120,10 +122,10 @@ googleSignIn(e){
             Login
         </Button>
         <Button onClick={this.signup} variant="outlined" size="large" color="secondary" style={{width: "10vw", minHeight: "8vh", margin: "2vh 1vw"}}>
-            Signup
+            Sign Up
         </Button>
         </div>
-        <hr></hr>
+        <hr/>
         <div>
           <Button onClick={this.googleSignIn} variant="contained" size="large" color="primary" style={{width: "20vw", minHeight: "8vh", margin: "2vh 1vw"}}>Sign in with Google</Button>
         </div>

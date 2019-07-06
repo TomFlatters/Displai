@@ -163,8 +163,8 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: left;
-  width: 40vw;
-  margin: 0 0 0 10vw;
+  width: 35vw;
+  margin: 0 5vw 0 10vw;
 }
 .LoginScreen {
   height: 100vh;
@@ -199,4 +199,33 @@
   50%{background: #01579b}
   75%{background: #4f83cc}
   to{background: #01579b}
+}
+
+/* now for stuff after login */
+
+.feed {
+  background-color: white;
+  height: 100vh;
+  width: 100vw; 
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.namescreen{
+  background-color: #01579b;
+  height: 100vh;
+  width: 100vw; 
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.flex{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
